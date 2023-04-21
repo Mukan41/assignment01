@@ -5,6 +5,7 @@ const Maindiv = styled.div`
 width:100%;
 background-color:#272759;
 padding-top:1rem;
+padding-bottom:1rem;
 display:flex;
 flex-direction:column;
 align-items:center;
