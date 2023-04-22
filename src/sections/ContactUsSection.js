@@ -1,4 +1,13 @@
+import * as React from 'react';
 import styled from "styled-components";
+
+import { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+
 
 const Maindiv = styled.div`
 width:100%;
@@ -36,6 +45,26 @@ color: #272759;
 text-align:center;
 `;
 export default function ContactUsSection() {
+
+    const mobileRef = useRef(null);
+
+    useEffect(() => {
+  
+      gsap.from(mobileRef.current, {
+        autoAlpha: 0,
+      }, {
+        duration:1,
+        autoAlpha:1,
+        ease:'none',
+        scrollTrigger:{
+            id:'mobileRef'
+        }
+      }
+      );
+  
+    }, [])
+    
+
     return (
         <Maindiv>
             <Contentdiv>
@@ -46,7 +75,7 @@ export default function ContactUsSection() {
                     to thrive
                     in today’s market</Paragraph>
             </Contentdiv>
-            <Image src="./assets/images/Group 37.svg" alt="contact us"></Image>
+            <Image src="./assets/images/Group 37.svg" alt="contact us"  ref={mobileRef} v></Image>
         </Maindiv>
     );
 };

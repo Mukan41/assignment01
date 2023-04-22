@@ -7,7 +7,7 @@ const Maindiv = styled.div`
 position:relative;
 margin-bottom:-5px;
 `;
-const Image=styled.img`
+const Image = styled.img`
 max-width:100%;
 height:auto;
 
