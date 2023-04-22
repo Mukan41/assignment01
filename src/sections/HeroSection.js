@@ -5,10 +5,12 @@ import styled from 'styled-components';
 
 const Maindiv = styled.div`
 position:relative;
+margin-bottom:-5px;
 `;
 const Image=styled.img`
 max-width:100%;
 height:auto;
+
 `;
 const Rightdiv = styled.div`
 position:absolute;
@@ -20,6 +22,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 margin-right:3rem;
+
 @media (max-width:768px){
   margin-right:1.5rem;
 }
