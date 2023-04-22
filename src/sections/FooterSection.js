@@ -1,4 +1,6 @@
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import styled from "styled-components";
+
 
 const Maindiv = styled.div`
 background-color:black;
@@ -96,6 +98,7 @@ margin-bottom: 0.5rem;
 `;
 const List=styled.li`
 list-style:none;
+margin-bottom:.25rem;
 `;
 const Unorderlist=styled.ul`
 padding:0;
@@ -112,6 +115,14 @@ const Paragraph=styled.p`
 color: white;
 `;
 const SocialIcon=styled.div``;
+const SocialLinks=styled.a`
+color: #272759;
+font-size: 22px;
+margin:.25rem;
+&:hover{
+    color:#00d563;
+}
+`;
 export default function FooterSection() {
     return (
         <Maindiv>
@@ -155,10 +166,10 @@ export default function FooterSection() {
                     </Info>
                     <DukeSocial>
                         <FooterMenuHeading >Duqe</FooterMenuHeading>
-                        <SocialIcon class="social-connect">
-                            <i class="fa-brands fa-facebook m-1"></i>
-                            <i class="fa-brands fa-instagram m-1"></i>
-                            <i class="fa-brands fa-linkedin m-1"></i>
+                        <SocialIcon>
+                            <SocialLinks href=""><FaFacebook /></SocialLinks>
+                            <SocialLinks href=""><FaInstagram /></SocialLinks>
+                            <SocialLinks href=""><FaYoutube /></SocialLinks>
                         </SocialIcon>
                     </DukeSocial>
                     <Address>
