@@ -39,18 +39,53 @@ width:23%;
 display:flex;
 flex-direction:column;
 padding-left:1%;
+@media (max-width:768px){
+    width:49%;
+}
+@media (max-width:576px){
+    width:98%;
+    padding-left:2%;
+}
 `;
 const BusinessSetup = styled.div`
 width:24%;
+@media (max-width:768px){
+    width:50%;
+}
+@media (max-width:576px){
+    width:98%;
+    padding-left:2%;
+}
 `;
 const DukeSocial = styled.div`
 width:17%;
+@media (max-width:768px){
+    width:33%;
+}
+@media (max-width:576px){
+    width:98%;
+    padding-left:2%;
+}
 `;
 const Info = styled.div`
 width:16%;
+@media (max-width:768px){
+    width:33%;
+    padding-left:1%;
+}
+@media (max-width:576px){
+    width:98%;
+    padding-left:2%;
 `;
 const Address = styled.div`
 width:19%;
+@media (max-width:768px){
+    width:33%;
+}
+@media (max-width:576px){
+    width:98%;
+    padding-left:2%;
+}
 `;
 const FooterMenuHeading=styled.h5`
 color:rgb(108,117,125);

@@ -4,18 +4,37 @@ import styled from "styled-components";
 const MainDiv = styled.div`
 width:100%;
 max-height:100vh;
-// height:7000px;
-// background-color:red;
-// display:flex:
-// justify-content:center;
-// align-items:center;
 position:relative;
+padding-top:150px;
+padding-bottom:150px;
+@media (max-width:576px){
+    padding-top:110px;
+    padding-bottom:110px;
+}
 `;
 const Contentdiv = styled.div`
 width:40%;
 margin:auto;
-padding:170px;
 text-align:center;
+z-index:3;
+@media (max-width:576px){
+    width:50%;
+}
+`;
+const Image=styled.img`
+max-width:100%;
+height:auto;
+@media (max-width:576px){
+    max-width:80%;
+}
+`;
+const HeadingUpwork=styled.h2`
+@media (max-width:576px){
+    font-size:1.2rem;
+}
+`;
+const Paragraph=styled.p`
+font-size:.9rem;
 `;
 const Button = styled.button`
 padding:10px;
@@ -30,6 +49,9 @@ border:1px solid #00D563;
 //   background-color:#00D56399;
   box-shadow:0 0 1px black;
   color:black;
+}
+@media (max-width:576px){
+    font-size:.9rem;
 }
 `;
 const HelloBoxFirst=styled.div`
@@ -49,6 +71,15 @@ left: 18%;
     position: absolute;
     top: 100%;
     right: 100%;
+    @media (max-width:576px){
+        left: 100%; 
+        border-radius:0 15px 15px 15px;
+    }
+}
+@media (max-width:576px){
+    width:45px; 
+    height:45px;
+    left: 16%;
 }
 `;
 const HelloBoxSecond=styled.div`
@@ -69,6 +100,11 @@ right: 18%;
     top: 100%;
     right: 100%;
 }
+@media (max-width:576px){
+    width:45px; 
+    height:45px;
+    right: 16%;
+}
 `;
 const HelloBoxThird=styled.div`
 position:absolute;
@@ -87,6 +123,11 @@ left: 10%;
     position: absolute;
     top: 100%;
     left: 100%;
+}
+@media (max-width:576px){
+    width:45px; 
+    height:45px;
+    left: 8%;
 }
 `;
 const HelloBoxForth=styled.div`
@@ -107,6 +148,11 @@ right: 10%;
     top: 100%;
     right: 100%;
 }
+@media (max-width:576px){
+    width:45px; 
+    height:45px;
+    right: 8%;
+}
 `;
 const HelloBoxFifth=styled.div`
 position:absolute;
@@ -125,6 +171,11 @@ left: 23%;
     position: absolute;
     top: 100%;
     left: 100%;
+}
+@media (max-width:576px){
+    width:45px; 
+    height:45px;
+    left: 18%;
 }
 `;
 const HelloBoxSix=styled.div`
@@ -145,6 +196,11 @@ right: 23%;
     top: 100%;
     right: 100%;
 }
+@media (max-width:576px){
+    width:45px; 
+    height:45px;
+    right: 18%;
+}
 `;
 const HelloBoxSeven=styled.div`
 position:absolute;
@@ -163,6 +219,11 @@ left: 8%;
     position: absolute;
     top: 100%;
     left: 100%;
+}
+@media (max-width:576px){
+    width:45px; 
+    height:45px;
+    left: 6%;
 }
 `;
 const HelloBoxEight=styled.div`
@@ -183,18 +244,23 @@ right: 8%;
     top: 100%;
     right: 100%;
 }
+@media (max-width:576px){
+    width:45px; 
+    height:45px;
+    right: 6%;
+}
 `;
 export default function UpworkSection() {
     return (
         <MainDiv>
             <Contentdiv>
-            <img src="./assets/images/trophy 1 (Traced).svg" alt="" />
-            <h2>I Am Very Happy to Say that<br />
-            I am Top Rated on <span>Upwork</span> </h2>
-            <p>I’m really excited to work on so many more projects and deliver amazing
+            <Image src="./assets/images/trophy 1 (Traced).svg" alt="trophy" />
+            <HeadingUpwork>I Am Very Happy to Say that<br />
+            I am Top Rated on <span>Upwork</span> </HeadingUpwork>
+            <Paragraph>I’m really excited to work on so many more projects and deliver amazing
             work consistently!
             But I also
-            want to keep my feet on the ground and try to maintain my score.</p>
+            want to keep my feet on the ground and try to maintain my score.</Paragraph>
             <Button>Visit My Upwork Profile</Button>
         </Contentdiv>
         <HelloBoxFirst></HelloBoxFirst>

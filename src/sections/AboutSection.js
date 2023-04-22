@@ -15,6 +15,9 @@ width:50%;
 background-color:#00D563;
 padding-top:3rem;
 padding-bottom:3rem;
+@media (max-width:768px){
+    width:100%;
+}
 `;
 const Rightdiv = styled.div`
 width:50%;
@@ -22,6 +25,10 @@ width:50%;
 background-color:#19194B;
 padding-top:3rem;
 padding-bottom:3rem;
+@media (max-width:768px){
+    width:100%;
+    position:relative;
+}
 `;
 const LeftContent = styled.div`
 margin: calc(30px + 1vw);
@@ -85,6 +92,11 @@ height: 110%;
 top: 45%;
 left: 50%;
 transform:translate(-50%, -50%);
+@media (max-width:768px) {
+    height: 113%;
+    top: 42%;
+    left: 30%;
+}
 `;
 export default function AboutSection() {
     return (
@@ -138,8 +150,9 @@ export default function AboutSection() {
                         <Rigghtlist>Augment Resource Management</Rigghtlist>
                     </UnorderedListRight>
                 </RightContent>
+                <HamzaCenterImage src="./assets/images/Group 31.svg" alt='hamza'></HamzaCenterImage>
             </Rightdiv>
-            <HamzaCenterImage src="./assets/images/Group 31.svg" alt='hamza'></HamzaCenterImage>
+            
         </Maindiv>
     )
 }
