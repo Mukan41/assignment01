@@ -4,6 +4,8 @@ import HeroSection from './sections/HeroSection';
 import AboutSection from './sections/AboutSection';
 import UpworkSection from './sections/UpworkSection';
 import CampaignSection from './sections/CampaignSection';
+import ContactUsSection from './sections/ContactUsSection';
+import FooterSection from './sections/FooterSection';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <AboutSection />
       <UpworkSection />
       <CampaignSection />
+      <ContactUsSection />
+      <FooterSection />
     </>
   );
 }

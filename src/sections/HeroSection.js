@@ -31,7 +31,8 @@ color:white;
 font-weight:500;
 font-family: 'Poppins', sans-serif;
 line-height: 3rem;
-transform: scale(1,1.37);
+transform: scale(1,1.7);
+text-shadow:0 0 2px white;
 `;
 const P = styled.p`
 font-size:16px;
@@ -41,6 +42,7 @@ font-family: 'Poppins', sans-serif;
 `;
 const Span = styled.span`
 color:#00D563;
+text-shadow:0 0 5px #00d563;
 `;
 const Button = styled.button`
 padding:10px;
@@ -71,7 +73,8 @@ export default function HeroSection() {
       <Rightdiv>
         <Contentdiv>
           <Heading><Span>DIGITAL</Span><br />MARKETING</Heading>
-          <P>UAE'S VISION COMBINED WITH GERMAN PRECISION—THE GOLD STANDARD TO GROW BUSINESS.</P>
+          <P>UAE'S VISION COMBINED WITH GERMAN PRECISION <br />
+            —THE GOLD STANDARD TO GROW BUSINESS.</P>
           <Button>REQUEST A FREE QUOTE</Button>
         </Contentdiv>
       </Rightdiv>
