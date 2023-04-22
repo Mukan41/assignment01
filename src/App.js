@@ -9,8 +9,6 @@ import FooterSection from './sections/FooterSection';
 
 
 function App() {
-
-
   return (
     <>
       <HeroSection />
