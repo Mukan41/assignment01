@@ -31,8 +31,7 @@ margin-right:3rem;
 }
 `;
 const Contentdiv = styled.div`
-// margin-top:30%;
-// margin-bottom:30%;
+margin-top:10px;
 `;
 const Heading = styled.h1`
 font-size:3.5em;
@@ -40,6 +39,7 @@ color:white;
 font-weight:500;
 margin:0;
 margin-bottom:1rem;
+padding-bottom:.5rem;
 font-family: 'Poppins', sans-serif;
 line-height: 3rem;
 transform: scale(1,1.7);
@@ -48,11 +48,13 @@ text-shadow:0 0 2px white;
   font-size:2.4em;
   line-height: 2.4rem;
   margin-bottom:.8rem;
+  padding-bottom:.4rem;
 }
 @media (max-width:576px){
   font-size:1.3em;
   line-height: 1rem;
   margin-bottom:.5rem;
+  padding-bottom:.3rem;
 }
 `;
 const P = styled.p`
@@ -62,12 +64,12 @@ padding-top:10px;
 margin-bottom:25px;
 font-family: 'Poppins', sans-serif;
 @media (max-width:768px){
-  font-size:13px;
+  font-size:12px;
   margin-bottom:12px;
   padding-top:8px;
 }
 @media (max-width:576px){
-  font-size:10px;
+  font-size:8px;
   margin-bottom:7px;
   padding-top:6px;
   margin-top:0;
@@ -75,7 +77,7 @@ font-family: 'Poppins', sans-serif;
 `;
 const Span = styled.span`
 color:#00D563;
-text-shadow:0 0 5px #00d563;
+text-shadow:0 0 10px #00d563;
 `;
 const Button = styled.button`
 padding:10px;
@@ -107,7 +109,7 @@ export default function HeroSection() {
 
   return (
     <Maindiv>
-      <Image src='../assets/images/Group 21.svg' alt='digital marketing'></Image>
+      <Image src='../assets/images/Group 26.svg' alt='digital marketing'></Image>
       <Rightdiv>
         <Contentdiv>
           <Heading><Span>DIGITAL</Span><br />MARKETING</Heading>

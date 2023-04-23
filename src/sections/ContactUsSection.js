@@ -1,11 +1,11 @@
-import * as React from 'react';
+// import * as React from 'react';
+import { useRef, useEffect } from 'react';
 import styled from "styled-components";
 
-import { useRef, useEffect } from 'react';
+
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
 
 
 
@@ -75,32 +75,27 @@ background-color:rgb(71 183 198);
 border-radius:5px;
 `;
 export default function ContactUsSection() {
+    gsap.registerPlugin(ScrollTrigger);
 
-    const mobileRef = useRef(null);
+    const ref = useRef(null);
 
     useEffect(() => {
-
-        gsap.from(mobileRef.current, {
-            autoAlpha: 0,
-        }, {
-            duration: 1,
-            autoAlpha: 1,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: mobileRef,
-                pin: true,
-                start: "top center",
-                end: "+=300",
-
-            }
-        }
-        );
-
-    }, [])
+        const element = ref.current;
+        gsap.from(element.querySelector(".mobile-scale"), {
+          scale: 1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: element.querySelector(".mobile-scale"),
+            scrub: true,
+            start: "top center",
+            end: "top top",
+          },
+        });
+      }, []);
 
 
     return (
-        <Maindiv>
+        <Maindiv ref={ref}>
             <Contentdiv>
                 <Heading>Drive Results,<br />
                     Maximize your ROI</Heading>
@@ -109,7 +104,7 @@ export default function ContactUsSection() {
                     to thrive
                     in today’s market</Paragraph>
             </Contentdiv>
-            <Image src="./assets/images/Group 37.svg" alt="contact us" ref={mobileRef} v></Image>
+            <Image src="./assets/images/Group 37.svg" alt="contact us" className="mobile-scale" ></Image>
             <Contactform>
                 <HeadingForm>Calculate the cost of your business setup</HeadingForm>
                 <ParagraphForm>Choose your business category</ParagraphForm>
