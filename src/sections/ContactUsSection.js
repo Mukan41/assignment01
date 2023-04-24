@@ -82,12 +82,14 @@ export default function ContactUsSection() {
     useEffect(() => {
         const element = ref.current;
         gsap.from(element.querySelector(".mobile-scale"), {
-          scale: 1,
+          scale: 0,
           ease: "none",
           scrollTrigger: {
             trigger: element.querySelector(".mobile-scale"),
+            paused: true,
             scrub: true,
-            start: "top center",
+            start: "top bottom",
+            scale:2,
             end: "top top",
           },
         });
