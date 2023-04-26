@@ -92,27 +92,29 @@ export default function ContactUsSection() {
         //     }
         //   });
           
-        //   gsap.to(".mobile-scale", {
-        //     scrollTrigger: {
-        //       trigger: ".Maindiv",
-        //       scrub: 0.5,
-        //       start: "top bottom",
-        //       end: "bottom 300%",
-        //       ease: "power2"
-        //     },
-        //     y: "-30%"
-        //   });
-          
-          gsap.to(".mobile-scale", {
+          gsap.to(".Maindiv", {
             scrollTrigger: {
               trigger: ".Maindiv",
-              scrub: 2,
-              start: "top top",
+              pin:true,
+              scrub: 0.5,
+              start: "top center",
               end: "bottom -100%",
               ease: "power2"
             },
-            scale: 2
+            pin:true
           });
+          
+        //   gsap.to(".mobile-scale", {
+        //     scrollTrigger: {
+        //       trigger: ".mobile-scale",
+        //       scrub: 1,
+        //       start: "top bottom",
+        //       end: "bottom -50%",
+        //       ease: "power2",
+        //       markers:true
+        //     },
+        //     scale: 1.5
+        //   });
 }, []);
 
 
