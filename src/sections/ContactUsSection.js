@@ -79,42 +79,19 @@ export default function ContactUsSection() {
 
     const ref = useRef(null);
 
-    useEffect(() => {
-        // gsap.to(".Maindiv", {
-        //     scrollTrigger: {
-        //       trigger: ".Maindiv",
-        //       scrub: true,
-        //       pin: true,
-        //       start: "center center",
-        //       end: "bottom -100%",
-        //       toggleClass: "active",
-        //       ease: "power2"
-        //     }
-        //   });
-          
-          gsap.to(".Maindiv", {
+    useEffect(() => { 
+          gsap.to(".mobile-scale", {
             scrollTrigger: {
               trigger: ".Maindiv",
-              pin:true,
-              scrub: 0.5,
-              start: "top center",
-              end: "bottom -100%",
-              ease: "power2"
+              scrub: 1,
+              start: "top bottom",
+              end: "center bottom",
+              ease: "power2",
+              markers:true
             },
-            pin:true
+            width:100%,
+            // pin:true
           });
-          
-        //   gsap.to(".mobile-scale", {
-        //     scrollTrigger: {
-        //       trigger: ".mobile-scale",
-        //       scrub: 1,
-        //       start: "top bottom",
-        //       end: "bottom -50%",
-        //       ease: "power2",
-        //       markers:true
-        //     },
-        //     scale: 1.5
-        //   });
 }, []);
 
 
